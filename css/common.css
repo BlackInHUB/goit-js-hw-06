@@ -22,3 +22,22 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+
+.gallery {
+  list-style: none;
+}
+
+.galleryItem:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.galleryItemImg {
+  height: 750px;
+  width: 1260px;
+  transition: transform 250ms linear;
+}
+
+.galleryItemImg:hover,
+.galleryItemImg:focus {
+  transform: scale(1.02);
+}
