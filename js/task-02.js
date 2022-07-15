@@ -1,11 +1,8 @@
 const ingredients = ['Potatoes', 'Mushrooms', 'Garlic', 'Tomatos', 'Herbs', 'Condiments'];
-
 const ingredientsList = document.querySelector('#ingredients');
 
-ingredients.forEach(function (el) {
-  const listItem = document.createElement('li');
-  listItem.textContent = el;
-  listItem.classList.add('item');
+const ingridientsItems = ingredients
+  .map(ingredient => `<li class="item">${ingredient}</li>`)
+  .join('');
 
-  ingredientsList.append(listItem);
-});
+ingredientsList.insertAdjacentHTML('afterbegin', ingridientsItems);
